@@ -23,13 +23,15 @@ public:
                 if(st.empty()) {
                     break;
                 }
-                root = st.top();
-                v.push_back(root->val);
+                else {
+                 root = st.top();
+                
                 st.pop();
+                v.push_back(root->val);
                 root = root->right;
+                }
             }
         }
         return v;
-
     }
 };
